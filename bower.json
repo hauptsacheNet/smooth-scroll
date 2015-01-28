@@ -1,0 +1,25 @@
+{
+  "name": "smooth-scroll",
+  "version": "1.0.0",
+  "description": "drop-in solution for smooth scrolling when using references",
+  "keywords": [
+    "scroll",
+    "reference",
+    "hash"
+  ],
+  "authors": [
+    "Marco Pfeiffer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "Public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.9"
+  }
+}
