@@ -7,9 +7,13 @@
     $document.on('click.smooth-scroll', 'a[href*="#"]:not([target])', function (e) {
         var target = e.target;
 
+        if (e.isDefaultPrevented()) {
+            return;
+        }
+
         // don't do anything if this link does not point at this page
         if (location.origin !== target.origin || location.pathname !== target.pathname) {
-            return false;
+            return;
         }
 
         // find the target element
