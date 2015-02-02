@@ -5,23 +5,23 @@
     var $scrollElements = $('html, body');
 
     $document.on('click.smooth-scroll', 'a[href*="#"]:not([target])', function (e) {
-        var target = e.target;
+        var linkElement = this;
 
         if (e.isDefaultPrevented()) {
             return;
         }
 
         // don't do anything if this link does not point at this page
-        if (location.origin !== target.origin || location.pathname !== target.pathname) {
+        if (location.origin !== linkElement.origin || location.pathname !== linkElement.pathname) {
             return;
         }
 
         // find the target element
-        var hash = target.hash.replace(/^#/, '');
+        var hash = linkElement.hash.replace(/^#/, '');
         var $target = $('#' + hash);
 
         var changeHash = function () {
-            location.hash = target.hash;
+            location.hash = linkElement.hash;
         };
 
         var scrollPosition = $target.offset() || {left: 0, top: 0};
