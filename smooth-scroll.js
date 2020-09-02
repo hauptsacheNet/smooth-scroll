@@ -20,6 +20,9 @@
         var hash = linkElement.hash.replace(/^#/, '');
         var $target = $('#' + hash);
 
+        if (!$target.is(':visible')) {
+            return;
+        }
         var changeHash = function () {
             location.hash = linkElement.hash;
         };
